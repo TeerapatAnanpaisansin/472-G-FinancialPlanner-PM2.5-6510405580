@@ -60,7 +60,7 @@ services:
     container_name: financial-planner-nginx
     restart: unless-stopped
     ports:
-      - "8000:80"
+      - "80:80"
     volumes:
       - ./:/var/www
       - type: bind

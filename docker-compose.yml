@@ -63,7 +63,9 @@ services:
       - "8000:80"
     volumes:
       - ./:/var/www
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - type: bind
+        source: ./nginx.conf
+        target: /etc/nginx/conf.d/default.conf
     networks:
       - financial-planner
     depends_on:
